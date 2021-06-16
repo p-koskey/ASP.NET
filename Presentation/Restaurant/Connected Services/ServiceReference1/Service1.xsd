@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RestaurantsModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RestaurantsModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRestaurants">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Restaurants" nillable="true" type="tns:Restaurants" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRestaurants" nillable="true" type="tns:ArrayOfRestaurants" />
+  <xs:complexType name="Restaurants">
+    <xs:sequence>
+      <xs:element name="CuisineEnum" type="tns:CuisineType" />
+      <xs:element name="CuisineType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Restaurants" nillable="true" type="tns:Restaurants" />
+  <xs:simpleType name="CuisineType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Kenyan" />
+      <xs:enumeration value="Italian" />
+      <xs:enumeration value="Indian" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CuisineType" nillable="true" type="tns:CuisineType" />
+</xs:schema>
