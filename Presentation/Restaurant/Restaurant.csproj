@@ -198,7 +198,7 @@
     <Compile Include="UnityResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connected Services\ServiceReference1\Restaurant.ServiceReference1.Restaurants.datasource">
+    <Content Include="Connected Services\ServiceReference1\Restaurant.ServiceReference1.RestaurantDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServiceReference1\Service1.disco" />

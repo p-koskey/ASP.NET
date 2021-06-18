@@ -14,14 +14,14 @@ namespace RestaurantsServices
     public interface IService1
     {
         [OperationContract]
-        IEnumerable<Restaurants> GetAll();
+        IEnumerable<RestaurantDTO> GetAll();
         [OperationContract]
-        Restaurants Get(int Id);
+        RestaurantDTO Get(int Id);
         [OperationContract]
-        void Add(Restaurants entity);
+        void Add(RestaurantDTO entity);
         [OperationContract]
-        void Remove(Restaurants entity);
+        void Remove(RestaurantDTO entity);
         [OperationContract]
-        void Update(Restaurants entity);
+        void Update(RestaurantDTO entity);
     }
 }

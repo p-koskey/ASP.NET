@@ -9,7 +9,7 @@
   <xs:element name="GetAllResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="GetAllResult" nillable="true" type="q1:ArrayOfRestaurants" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="GetAllResult" nillable="true" type="q1:ArrayOfRestaurantDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -23,14 +23,14 @@
   <xs:element name="GetResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="GetResult" nillable="true" type="q2:Restaurants" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="GetResult" nillable="true" type="q2:RestaurantDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Add">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="entity" nillable="true" type="q3:Restaurants" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="entity" nillable="true" type="q3:RestaurantDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -42,7 +42,7 @@
   <xs:element name="Remove">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="entity" nillable="true" type="q4:Restaurants" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="entity" nillable="true" type="q4:RestaurantDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -54,7 +54,7 @@
   <xs:element name="Update">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="entity" nillable="true" type="q5:Restaurants" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/RestaurantsModel" minOccurs="0" name="entity" nillable="true" type="q5:RestaurantDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

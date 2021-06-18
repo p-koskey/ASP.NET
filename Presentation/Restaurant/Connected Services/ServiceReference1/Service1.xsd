@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RestaurantsModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RestaurantsModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfRestaurants">
+  <xs:complexType name="ArrayOfRestaurantDTO">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Restaurants" nillable="true" type="tns:Restaurants" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RestaurantDTO" nillable="true" type="tns:RestaurantDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfRestaurants" nillable="true" type="tns:ArrayOfRestaurants" />
-  <xs:complexType name="Restaurants">
+  <xs:element name="ArrayOfRestaurantDTO" nillable="true" type="tns:ArrayOfRestaurantDTO" />
+  <xs:complexType name="RestaurantDTO">
     <xs:sequence>
       <xs:element name="CuisineEnum" type="tns:CuisineType" />
       <xs:element name="CuisineType" nillable="true" type="xs:string" />
@@ -14,7 +14,7 @@
       <xs:element name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Restaurants" nillable="true" type="tns:Restaurants" />
+  <xs:element name="RestaurantDTO" nillable="true" type="tns:RestaurantDTO" />
   <xs:simpleType name="CuisineType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="None" />

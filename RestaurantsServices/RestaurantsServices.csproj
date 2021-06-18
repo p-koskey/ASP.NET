@@ -66,6 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationErrorHandlerAttribute.cs" />
+    <Compile Include="AutoMapperConfig\AutoMapperConfig.cs" />
+    <Compile Include="AutoMapperConfig\AutoMapperProfile.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>

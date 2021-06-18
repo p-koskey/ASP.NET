@@ -15,9 +15,9 @@ namespace Restaurant.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Restaurants", Namespace="http://schemas.datacontract.org/2004/07/RestaurantsModel")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RestaurantDTO", Namespace="http://schemas.datacontract.org/2004/07/RestaurantsModel")]
     [System.SerializableAttribute()]
-    public partial class Restaurants : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class RestaurantDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -125,34 +125,34 @@ namespace Restaurant.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAll", ReplyAction="http://tempuri.org/IService1/GetAllResponse")]
-        Restaurant.ServiceReference1.Restaurants[] GetAll();
+        Restaurant.ServiceReference1.RestaurantDTO[] GetAll();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAll", ReplyAction="http://tempuri.org/IService1/GetAllResponse")]
-        System.Threading.Tasks.Task<Restaurant.ServiceReference1.Restaurants[]> GetAllAsync();
+        System.Threading.Tasks.Task<Restaurant.ServiceReference1.RestaurantDTO[]> GetAllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Get", ReplyAction="http://tempuri.org/IService1/GetResponse")]
-        Restaurant.ServiceReference1.Restaurants Get(int Id);
+        Restaurant.ServiceReference1.RestaurantDTO Get(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Get", ReplyAction="http://tempuri.org/IService1/GetResponse")]
-        System.Threading.Tasks.Task<Restaurant.ServiceReference1.Restaurants> GetAsync(int Id);
+        System.Threading.Tasks.Task<Restaurant.ServiceReference1.RestaurantDTO> GetAsync(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Add", ReplyAction="http://tempuri.org/IService1/AddResponse")]
-        void Add(Restaurant.ServiceReference1.Restaurants entity);
+        void Add(Restaurant.ServiceReference1.RestaurantDTO entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Add", ReplyAction="http://tempuri.org/IService1/AddResponse")]
-        System.Threading.Tasks.Task AddAsync(Restaurant.ServiceReference1.Restaurants entity);
+        System.Threading.Tasks.Task AddAsync(Restaurant.ServiceReference1.RestaurantDTO entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Remove", ReplyAction="http://tempuri.org/IService1/RemoveResponse")]
-        void Remove(Restaurant.ServiceReference1.Restaurants entity);
+        void Remove(Restaurant.ServiceReference1.RestaurantDTO entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Remove", ReplyAction="http://tempuri.org/IService1/RemoveResponse")]
-        System.Threading.Tasks.Task RemoveAsync(Restaurant.ServiceReference1.Restaurants entity);
+        System.Threading.Tasks.Task RemoveAsync(Restaurant.ServiceReference1.RestaurantDTO entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
-        void Update(Restaurant.ServiceReference1.Restaurants entity);
+        void Update(Restaurant.ServiceReference1.RestaurantDTO entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
-        System.Threading.Tasks.Task UpdateAsync(Restaurant.ServiceReference1.Restaurants entity);
+        System.Threading.Tasks.Task UpdateAsync(Restaurant.ServiceReference1.RestaurantDTO entity);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -182,43 +182,43 @@ namespace Restaurant.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public Restaurant.ServiceReference1.Restaurants[] GetAll() {
+        public Restaurant.ServiceReference1.RestaurantDTO[] GetAll() {
             return base.Channel.GetAll();
         }
         
-        public System.Threading.Tasks.Task<Restaurant.ServiceReference1.Restaurants[]> GetAllAsync() {
+        public System.Threading.Tasks.Task<Restaurant.ServiceReference1.RestaurantDTO[]> GetAllAsync() {
             return base.Channel.GetAllAsync();
         }
         
-        public Restaurant.ServiceReference1.Restaurants Get(int Id) {
+        public Restaurant.ServiceReference1.RestaurantDTO Get(int Id) {
             return base.Channel.Get(Id);
         }
         
-        public System.Threading.Tasks.Task<Restaurant.ServiceReference1.Restaurants> GetAsync(int Id) {
+        public System.Threading.Tasks.Task<Restaurant.ServiceReference1.RestaurantDTO> GetAsync(int Id) {
             return base.Channel.GetAsync(Id);
         }
         
-        public void Add(Restaurant.ServiceReference1.Restaurants entity) {
+        public void Add(Restaurant.ServiceReference1.RestaurantDTO entity) {
             base.Channel.Add(entity);
         }
         
-        public System.Threading.Tasks.Task AddAsync(Restaurant.ServiceReference1.Restaurants entity) {
+        public System.Threading.Tasks.Task AddAsync(Restaurant.ServiceReference1.RestaurantDTO entity) {
             return base.Channel.AddAsync(entity);
         }
         
-        public void Remove(Restaurant.ServiceReference1.Restaurants entity) {
+        public void Remove(Restaurant.ServiceReference1.RestaurantDTO entity) {
             base.Channel.Remove(entity);
         }
         
-        public System.Threading.Tasks.Task RemoveAsync(Restaurant.ServiceReference1.Restaurants entity) {
+        public System.Threading.Tasks.Task RemoveAsync(Restaurant.ServiceReference1.RestaurantDTO entity) {
             return base.Channel.RemoveAsync(entity);
         }
         
-        public void Update(Restaurant.ServiceReference1.Restaurants entity) {
+        public void Update(Restaurant.ServiceReference1.RestaurantDTO entity) {
             base.Channel.Update(entity);
         }
         
-        public System.Threading.Tasks.Task UpdateAsync(Restaurant.ServiceReference1.Restaurants entity) {
+        public System.Threading.Tasks.Task UpdateAsync(Restaurant.ServiceReference1.RestaurantDTO entity) {
             return base.Channel.UpdateAsync(entity);
         }
     }

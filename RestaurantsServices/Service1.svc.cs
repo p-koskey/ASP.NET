@@ -1,4 +1,5 @@
-﻿using RestaurantsData;
+﻿using AutoMapper;
+using RestaurantsData;
 using RestaurantsModel;
 using RestaurantsServices;
 using System;
@@ -20,24 +21,36 @@ namespace RestaurantsServices
     public class Service1 : IService1
     {
         private readonly IRestaurantData<Restaurants> _restaurant;
+        private readonly IMapper _mapper;
 
-        public Service1(IRestaurantData<Restaurants> restaurant)
+        public Service1(IRestaurantData<Restaurants> restaurant, IMapper mapper)
         {
+            _mapper = mapper;
             _restaurant = restaurant;
+
         }
-        public void Add(Restaurants entity)
+        public void Add(RestaurantDTO entity)
         {
-            _restaurant.Add(entity);
+            _restaurant.Add(_mapper.Map<Restaurants>(entity));            
+
         }
 
-        public Restaurants Get(int Id)
+        public RestaurantDTO Get(int Id)
         {
-            return _restaurant.Get(Id);
+           var data =  _restaurant.Get(Id);
+            return _mapper.Map<RestaurantDTO>(data);
         }
 
-        public IEnumerable<Restaurants> GetAll()
+
+        public IEnumerable<RestaurantDTO> GetAll()
         {
-            return _restaurant.GetAll();
+
+          var data =  _restaurant.GetAll();
+
+           return _mapper.Map<IEnumerable<RestaurantDTO>>(data);
+
+
+
         }
 
         public string GetData(int value)
@@ -46,14 +59,14 @@ namespace RestaurantsServices
         }
 
 
-        public void Remove(Restaurants entity)
+        public void Remove(RestaurantDTO entity)
         {
-            _restaurant.Remove(entity);
+            _restaurant.Remove(_mapper.Map<Restaurants>(entity));
         }
 
-        public void Update(Restaurants entity)
+        public void Update(RestaurantDTO entity)
         {
-            _restaurant.Update(entity);
+            _restaurant.Update(_mapper.Map<Restaurants>(entity));
         }
     }
 }

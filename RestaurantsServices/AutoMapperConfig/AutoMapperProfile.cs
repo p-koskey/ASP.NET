@@ -6,13 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Restaurant
+namespace RestaurantsServices
 {
     public class AutoMapperProfile : Profile
     {
         public AutoMapperProfile()
         {
             CreateMap<Restaurants, RestaurantDTO>();
+            CreateMap<RestaurantDTO, Restaurants>();
         }
     }
 }

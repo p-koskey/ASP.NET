@@ -1,9 +1,13 @@
-﻿using RestaurantsData;
+﻿using AutoMapper;
+using RestaurantsData;
+using RestaurantsModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Unity;
+using Unity.Injection;
+using Unity.Lifetime;
 
 namespace RestaurantsServices
 {
@@ -43,6 +47,12 @@ namespace RestaurantsServices
             Current.RegisterType(typeof(IRestaurantData<>), typeof(RestaurantDataRepo<>));
             //DbContext
             Current.RegisterType<IDbContext, RestaurantDbContext>();
+            var mapperConfig = AutoMapperConfig.AutoMapperConfig.InitializeAutoMapper();
+            var mapper = mapperConfig.CreateMapper();
+            Current.RegisterType<IMapper, Mapper>(new InjectionConstructor(mapperConfig));
+            Current.RegisterInstance(mapper);
+            Current.RegisterType<IMapper, Mapper>(new InjectionConstructor(mapperConfig));
+           /* Current.RegisterInstance("Mapper", config.CreateMapper(), new ContainerControlledLifetimeManager());*/
         }
 
         #endregion

@@ -6,8 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RestaurantsModel
-{ 
-
+{
     [DataContract(Name = "CuisineType")]
     public enum CuisineDTO
     {

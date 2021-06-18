@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantsModel
 {
+    [DataContract]
     public class RestaurantDTO
     {
         [DataMember]

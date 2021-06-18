@@ -55,7 +55,7 @@ namespace Restaurant.Controllers
         }
         
         [HttpPost]
-        public ActionResult Create(Restaurants restaurant)
+        public ActionResult Create(RestaurantDTO restaurant)
         {
             Service1Client o = new Service1Client();
             if (ModelState.IsValid)
@@ -88,7 +88,7 @@ namespace Restaurant.Controllers
             return View(modelDelete);
         }
         [HttpPost]
-        public ActionResult Delete(Restaurants restaurant)
+        public ActionResult Delete(RestaurantDTO restaurant)
         {
             Service1Client o = new Service1Client();
             o.Remove(restaurant);
@@ -106,7 +106,7 @@ namespace Restaurant.Controllers
             return View(modelEdit);
         }
         [HttpPost]
-        public ActionResult Edit(Restaurants restaurant)
+        public ActionResult Edit(RestaurantDTO restaurant)
         {
             Service1Client o = new Service1Client();
             o.Update(restaurant);
